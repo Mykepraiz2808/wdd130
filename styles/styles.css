@@ -1,3 +1,9 @@
+:root{
+    --primary-color: darkblue;
+    --secondary-color: #eee;
+    --text-color: #333;
+}
+
 main{
     max-width: 840px;
 }
