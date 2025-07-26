@@ -1,16 +1,4 @@
-:root {
-  --primary-color: #006D77; /* forest green */
-  --secondary-color: #83C5BE; /* warm sand */
-  --accent1-color: #EDF6F9; /* gray */
-  --accent2-color: #FFDDD2; /* light golden yellow */
-  --heading-font: Bebas Neue;
-  --body-font: Open Sans;
-}
-
-header {
-    background-color: var(--secondary-color);
-    color: var(--accent2-color);
-}
+/* ========== GLOBAL RESET AND TYPOGRAPHY ========== */
 * {
   margin: 0;
   padding: 0;
@@ -18,47 +6,194 @@ header {
 }
 
 body {
-  font-family: var(--body-font);
-  color: var(--primary-color);
-}
-header, main, footer {
-  width: 840px;
-  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-color: #fff;
 }
 
 h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
+  font-family: 'Bebas Neue', sans-serif;
+  color: #222;
 }
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
-.socialmedia a {
-    text-decoration: none;
+
+/* ========== HEADER ========== */
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  background-color: #dcd6f7; /* Light purple header background */
+  padding: 1rem 2rem;
 }
+
+.logo {
+  height: 60px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.nav a {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: 1px solid #999;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #a393eb;
+  color: white;
+}
+
+/* ========== HERO SECTION ========== */
 .hero {
-  position: relative;
-}
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-h1 {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
   text-align: center;
-  opacity: 0;
-  background-color: var(--accent1-color);
-  color: #fff; /* white text - make sure there is enough contrast with the background-color */
+  padding: 2rem 1rem;
+  background-color: #413232;
 }
+
+.hero > img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ========== VISION ARTICLE ========== */
+.hero article {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  border-radius: 8px;
+}
+
 .hero article img {
-  float: right;
-  width: 125px;
+  width: 150px;
+  height: auto;
+  border-radius: 4px;
 }
 
+.hero article p {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
+/* ========== HISTORY SECTION ========== */
+main section:nth-of-type(1) {
+  display: grid;
+  grid-template-columns: 1fr 150px 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #edf2fb;
+  text-align: center;
+}
 
+main section:nth-of-type(1) h2 {
+  grid-column: 1 / -1;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+main section:nth-of-type(1) p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+main section:nth-of-type(1)::before {
+  content: "";
+}
+
+main section:nth-of-type(1)::after {
+  content: "";
+}
+
+main section:nth-of-type(1) div.image-box {
+  background-color: #5e60ce; /* Purple block */
+  width: 150px;
+  height: 150px;
+  border-radius: 6px;
+  background-image: url('../images/rafting59_happyrafters.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+}
+
+/* ========== ADVENTURE SECTION ========== */
+main section:nth-of-type(2) {
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+main section:nth-of-type(2) h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+main section:nth-of-type(2) img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+main section:nth-of-type(2)::after {
+  content: "";
+  display: block;
+  height: 2rem;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #dcd6f7;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 2px solid #ccc;
+}
+
+footer p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+footer .socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+footer .socialmedia img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+footer .socialmedia img:hover {
+  transform: scale(1.1);
+}
