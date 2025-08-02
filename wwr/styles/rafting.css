@@ -79,10 +79,10 @@ a {
 
 /* ========== VISION ARTICLE ========== */
 .article {
-  /* position: absolute; */
-  top: right;
+  position: relative;
+  right: 0;
   left: 30px;
-  z-index: ;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
@@ -93,9 +93,7 @@ a {
   max-width: 1500px;
   margin: 0 auto 3rem;
   border-radius: 8px;
-
 }
-
 .article1{
   width: 150px;
   height: auto;
